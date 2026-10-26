@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- Responsive Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-dark navbar-brand fw-bold" href="#">MyBrand</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-light py-5 border-bottom mb-5">
+    <div class="container py-5 text-center">
+      <h1 class="display-4 fw-bold text-dark">Welcome to Bootstrap 5</h1>
+      <p class="lead text-muted mb-4">Quickly design and customize responsive mobile-first sites with the world's most
+        popular front-end toolkit.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Main Content Grid -->
+  <main class="container">
+    <div class="row g-4">
+      <!-- Feature 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h2 class="h5 card-title fw-bold">Responsive Grid</h2>
+            <p class="card-text text-muted">The 12-column mobile-first grid system adapts seamlessly across phones,
+              tablets, and desktops.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Feature 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h2 class="h5 card-title fw-bold">Pre-built Components</h2>
+            <p class="card-text text-muted">Use cards, navbars, buttons, and badges right out of the box to quickly
+              structure your layout.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Feature 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h2 class="h5 card-title fw-bold">Utility-First</h2>
+            <p class="card-text text-muted">Style margins, padding, text alignments, and backgrounds effortlessly using
+              built-in helper classes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- My content -->
+
+    <div class="container mt-5" style="max-width: 500px;">
+      <form action="/search-user" method="GET">
+        <div class="mb-3">
+          <label for="userSearchInput" class="form-label fw-semibold">Find Existing User</label>
+          <div class="input-group">
+            <!-- Text Input Field -->
+            <input type="text" id="userSearchInput" name="username" class="form-control"
+              placeholder="Enter username, email, or User ID..." aria-label="Search for a user in the database"
+              aria-describedby="search-addon" required>
+
+            <!-- Search Button Addon -->
+            <button class="btn btn-primary" type="submit" id="search-addon">
+              <!-- Bootstrap Icons (Optional SVG icon for visual anchor) -->
+              <svg xmlns="http://w3.org" width="16" height="16" fill="currentColor" class="bi bi-search me-1"
+                viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+              </svg>
+              Search
+            </button>
+          </div>
+
+          <!-- Subtext hint -->
+          <div id="searchHelp" class="form-text">
+            Queries the active user directory in real-time.
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 my-5 border-top bg-light">
+    <div class="container text-center text-muted">
+      <small>&copy; 2026 MyBrand. Built with Bootstrap 5.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
