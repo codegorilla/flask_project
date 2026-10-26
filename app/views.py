@@ -5,8 +5,6 @@ from flask import request
 from flask import url_for
 from markupsafe import escape
 
-from app import app
-
 def register_routes (app):
 
   @app.route("/")
