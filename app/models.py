@@ -1,13 +1,14 @@
+from typing import Optional
+import sqlalchemy as sa
+import sqlalchemy.orm as so
 from app.extensions import db
 
-class Contact (db.Model):
-  __tablename__ = "contact"
+class User (db.Model):
 
-  id = db.Column(db.Integer, primary_key=True)
-  name = db.Column(db.String(120), nullable=False)
-  email = db.Column(db.String(120), unique=True, nullable=False)
-  phone = db.Column(db.String(50), nullable=False)
+  id: so.Mapped[int] = so.mapped_column(primary_key=True)
+  username: so.Mapped[str] = so.mapped_column(sa.String(64), index=True, unique=True, nullable=False)
+  email: so.Mapped[str] = so.mapped_column(sa.String(128), index=True, unique=True, nullable=False)
+  password_hash: so.Mapped[Optional[str]] = so.mapped_column(sa.String(256))
 
   def __repr__ (self) -> str:
-    return f"<Contact {self.id} {self.name}>"
-
+    return f"<User {self.id} {self.username}>"
