@@ -3,7 +3,10 @@ import sqlalchemy as sa
 import sqlalchemy.orm as so
 from app.extensions import db
 
-class User (db.Model):
+from app.extensions import login
+from flask_login import UserMixin
+
+class User (UserMixin, db.Model):
 
   id: so.Mapped[int] = so.mapped_column(primary_key=True)
   username: so.Mapped[str] = so.mapped_column(sa.String(64), index=True, unique=True, nullable=False)
@@ -18,3 +21,10 @@ class User (db.Model):
 
   def __repr__ (self) -> str:
     return f"<User {self.id} {self.username}>"
+
+# Left off here. Flask mega-tutorial part V
+
+@login.user_loader
+def load_user (id):
+  return db.session.get(User, int(id))
+
